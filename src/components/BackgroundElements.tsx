@@ -14,11 +14,16 @@ const generateSparks = (count: number) => {
   }));
 };
 
-// Butterfly positions
+// Butterfly positions - more butterflies throughout the page
 const butterflies = [
-  { id: 1, left: "10%", top: "20%", size: 80, delay: 0, rotate: -15 },
-  { id: 2, left: "85%", top: "35%", size: 60, delay: 2, rotate: 20 },
-  { id: 3, left: "15%", top: "70%", size: 50, delay: 4, rotate: -10 },
+  { id: 1, left: "8%", top: "15%", size: 90, delay: 0, rotate: -15 },
+  { id: 2, left: "88%", top: "25%", size: 70, delay: 1.5, rotate: 20 },
+  { id: 3, left: "12%", top: "55%", size: 60, delay: 3, rotate: -10 },
+  { id: 4, left: "92%", top: "60%", size: 80, delay: 2, rotate: 15 },
+  { id: 5, left: "5%", top: "85%", size: 55, delay: 4, rotate: -20 },
+  { id: 6, left: "85%", top: "80%", size: 65, delay: 2.5, rotate: 25 },
+  { id: 7, left: "50%", top: "10%", size: 50, delay: 1, rotate: 5 },
+  { id: 8, left: "75%", top: "45%", size: 45, delay: 3.5, rotate: -8 },
 ];
 
 export const BackgroundElements = () => {
