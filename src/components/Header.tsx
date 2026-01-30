@@ -14,7 +14,7 @@ export const Header = () => {
           <img
             src={logoEvolut}
             alt="Evolut FitKid"
-            className="h-10 md:h-12 w-auto"
+            className="h-14 md:h-20 w-auto"
           />
         </a>
       </div>
