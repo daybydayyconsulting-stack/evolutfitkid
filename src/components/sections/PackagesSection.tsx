@@ -103,7 +103,7 @@ export const PackagesSection = () => {
           transition={{ delay: 0.5, duration: 0.6 }}
           className="text-center text-sm text-muted-foreground mt-10"
         >
-          🎁 Descuento por segundo hermano (consultar condiciones)
+          Descuento por segundo hermano (consultar condiciones)
         </motion.p>
       </div>
     </section>

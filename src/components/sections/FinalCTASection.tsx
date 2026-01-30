@@ -22,7 +22,7 @@ export const FinalCTASection = () => {
           <h2 className="heading-lg text-foreground mb-6">
             ¿Te encaja?
             <br />
-            <span className="text-primary text-glow">Te contamos el mejor grupo</span>
+            <span className="text-primary">Te contamos el mejor grupo</span>
             <br />
             según edad y nivel.
           </h2>
