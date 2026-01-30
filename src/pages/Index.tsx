@@ -1,6 +1,7 @@
 import { BackgroundElements, PortalTransition } from "@/components/BackgroundElements";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { WhatIsFitkidSection } from "@/components/sections/WhatIsFitkidSection";
 import { WhatIsEvolutSection } from "@/components/sections/WhatIsEvolutSection";
 import { ScheduleSection } from "@/components/sections/ScheduleSection";
 import { PackagesSection } from "@/components/sections/PackagesSection";
@@ -59,7 +60,10 @@ const Index = () => {
         {/* Portal transition effect */}
         <PortalTransition />
 
-        {/* What is Evolut */}
+        {/* What is FitKid - Brief intro */}
+        <WhatIsFitkidSection />
+
+        {/* What is Evolut - Detailed */}
         <WhatIsEvolutSection />
 
         {/* Schedule */}
