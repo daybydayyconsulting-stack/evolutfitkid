@@ -25,7 +25,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="heading-xl text-foreground mb-6"
         >
-          <span className="text-glow text-primary">FitKid</span> & Fantasía
+          <span className="text-primary">FitKid</span> & Fantasía
           <br />
           <span className="text-muted-foreground font-light">en movimiento.</span>
         </motion.h1>
@@ -64,7 +64,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-muted-foreground text-sm mb-10"
         >
-          📍 Sede en Ventorro del Cano (zona Boadilla/Pozuelo)
+          Sede en Ventorro del Cano (zona Boadilla/Pozuelo)
         </motion.div>
 
         {/* CTAs */}

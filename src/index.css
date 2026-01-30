@@ -8,12 +8,12 @@
 
 @layer base {
   :root {
-    /* Core palette - Evolut brand: #080a2e (dark navy) + white */
+    /* Core palette - Evolut brand: #080a2e (dark navy) + #F4FFF8 (mint white) */
     --background: 237 71% 11%;
-    --foreground: 0 0% 100%;
+    --foreground: 142 100% 98%;
 
     --card: 237 65% 13%;
-    --card-foreground: 0 0% 100%;
+    --card-foreground: 142 100% 98%;
 
     --popover: 237 65% 13%;
     --popover-foreground: 0 0% 100%;
