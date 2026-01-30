@@ -116,7 +116,7 @@ export const HeroSection = () => {
         </motion.p>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - positioned higher to avoid overlap */}
       <motion.div initial={{
       opacity: 0
     }} animate={{
@@ -124,7 +124,7 @@ export const HeroSection = () => {
     }} transition={{
       duration: 1,
       delay: 1
-    }} className="absolute bottom-8 left-1/2 -translate-x-1/2">
+    }} className="absolute bottom-24 left-1/2 -translate-x-1/2">
         <motion.div animate={{
         y: [0, 10, 0]
       }} transition={{
