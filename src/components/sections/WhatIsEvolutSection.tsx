@@ -1,5 +1,6 @@
 import { motion, type Easing } from "framer-motion";
 import { Sparkles, Zap } from "lucide-react";
+import { CONTENT } from "@/lib/siteConfig";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -22,9 +23,9 @@ export const WhatIsEvolutSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="heading-lg text-foreground mb-4">¿Qué es Evolut?</h2>
+          <h2 className="heading-lg text-foreground mb-4">{CONTENT.whatIs.title}</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Dos disciplinas, un mismo objetivo: que cada alumna disfrute, progrese y brille.
+            {CONTENT.whatIs.subtitle}
           </p>
         </motion.div>
 
@@ -43,25 +44,18 @@ export const WhatIsEvolutSection = () => {
               <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 transition-colors">
                 <Sparkles className="w-6 h-6 text-accent" />
               </div>
-              <h3 className="heading-md text-foreground">Fantasía</h3>
+              <h3 className="heading-md text-foreground">{CONTENT.whatIs.fantasia.title}</h3>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Interpretación + storytelling. Las alumnas aprenden a contar historias con su cuerpo, 
-              expresando emociones a través de la danza y la actuación. Creatividad, musicalidad y escenario.
+              {CONTENT.whatIs.fantasia.description}
             </p>
             <ul className="mt-6 space-y-2 text-sm">
-              <li className="flex items-center gap-2 text-foreground/80">
-                <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                Expresión corporal y drama
-              </li>
-              <li className="flex items-center gap-2 text-foreground/80">
-                <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                Coreografías con narrativa
-              </li>
-              <li className="flex items-center gap-2 text-foreground/80">
-                <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                Preparación para exhibiciones
-              </li>
+              {CONTENT.whatIs.fantasia.features.map((feature, i) => (
+                <li key={i} className="flex items-center gap-2 text-foreground/80">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                  {feature}
+                </li>
+              ))}
             </ul>
           </motion.div>
 
@@ -78,28 +72,42 @@ export const WhatIsEvolutSection = () => {
               <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
                 <Zap className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="heading-md text-foreground">FitKid</h3>
+              <h3 className="heading-md text-foreground">{CONTENT.whatIs.fitkid.title}</h3>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Acrobacia + energía. Combinamos gimnasia, acrobacia y fitness en rutinas dinámicas. 
-              Las alumnas ganan fuerza, flexibilidad y confianza mientras se divierten.
+              {CONTENT.whatIs.fitkid.description}
             </p>
             <ul className="mt-6 space-y-2 text-sm">
-              <li className="flex items-center gap-2 text-foreground/80">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                Acrobacias y gimnasia
-              </li>
-              <li className="flex items-center gap-2 text-foreground/80">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                Condición física y fuerza
-              </li>
-              <li className="flex items-center gap-2 text-foreground/80">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                Técnica progresiva por niveles
-              </li>
+              {CONTENT.whatIs.fitkid.features.map((feature, i) => (
+                <li key={i} className="flex items-center gap-2 text-foreground/80">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  {feature}
+                </li>
+              ))}
             </ul>
           </motion.div>
         </div>
+
+        {/* Differentiators */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-16 text-center"
+        >
+          <p className="text-sm text-muted-foreground mb-6">Por qué Evolut es diferente</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {CONTENT.differentiators.map((item, i) => (
+              <span
+                key={i}
+                className="px-4 py-2 rounded-full bg-secondary/50 text-foreground/80 text-sm border border-border/30"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

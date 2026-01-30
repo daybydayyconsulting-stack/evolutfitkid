@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { MessageCircle, Phone, Sparkles, Star, Zap } from "lucide-react";
-import { CONTACT } from "@/lib/siteConfig";
+import { MessageCircle, Phone, Star, Zap } from "lucide-react";
+import { CONTACT, CONTENT } from "@/lib/siteConfig";
 
 export const HeroSection = () => {
   return (
@@ -14,8 +14,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.6 }}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8"
         >
-          <Sparkles className="w-4 h-4" />
-          <span>Escuela de Fantasía y FitKid</span>
+          <span>{CONTENT.hero.badge}</span>
         </motion.div>
 
         {/* Main heading */}
@@ -27,7 +26,7 @@ export const HeroSection = () => {
         >
           <span className="text-primary">FitKid</span> & Fantasía
           <br />
-          <span className="text-muted-foreground font-light">en movimiento.</span>
+          <span className="text-muted-foreground font-light text-2xl md:text-3xl">{CONTENT.hero.title}</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -37,7 +36,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
         >
-          Una escuela-club donde niñas y adultos entrenan, progresan y se suben al escenario con confianza.
+          {CONTENT.hero.subtitle}
         </motion.p>
 
         {/* Bullets */}
@@ -49,11 +48,11 @@ export const HeroSection = () => {
         >
           <div className="flex items-center gap-2 text-foreground/80">
             <Star className="w-4 h-4 text-primary" />
-            <span>Escuela (2h/semana) y vía a Competición (3 días/semana)</span>
+            <span>{CONTENT.hero.bullets[0]}</span>
           </div>
           <div className="flex items-center gap-2 text-foreground/80">
             <Zap className="w-4 h-4 text-primary" />
-            <span>Progreso visible, ambiente de familia</span>
+            <span>{CONTENT.hero.bullets[1]}</span>
           </div>
         </motion.div>
 
@@ -64,7 +63,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-muted-foreground text-sm mb-10"
         >
-          Sede en Ventorro del Cano (zona Boadilla/Pozuelo)
+          {CONTENT.hero.location}
         </motion.div>
 
         {/* CTAs */}
@@ -99,7 +98,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="text-xs text-muted-foreground mt-6"
         >
-          Respuesta rápida · Cupos limitados por sala
+          {CONTENT.hero.microcopy}
         </motion.p>
       </div>
 
