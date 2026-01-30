@@ -4,7 +4,7 @@ import { CONTACT, CONTENT } from "@/lib/siteConfig";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center section-padding pt-24 md:pt-32">
+    <section className="relative min-h-screen flex items-start justify-center section-padding pt-20 md:pt-24">
       {/* Hero content */}
       <div className="container max-w-5xl mx-auto text-center relative z-10">
         {/* Badge */}
