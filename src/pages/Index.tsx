@@ -64,14 +64,14 @@ const Index = () => {
         {/* What is FitKid - Brief intro */}
         <WhatIsFitkidSection />
 
-        {/* What is Evolut - Detailed */}
-        <WhatIsEvolutSection />
-
         {/* Gallery */}
         <GallerySection />
 
         {/* Schedule */}
         <ScheduleSection />
+
+        {/* What is Evolut - Detailed */}
+        <WhatIsEvolutSection />
 
         {/* Packages */}
         <PackagesSection />
