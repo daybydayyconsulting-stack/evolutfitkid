@@ -7,6 +7,7 @@ export const CONTACT = {
   // WhatsApp con mensaje precargado
   whatsappLink: "https://wa.me/34644392628?text=Hola%20Belén%2C%20quiero%20info%20para%20una%20clase%20de%20prueba%20en%20Evolut%20FitKid.",
   whatsappNumber: "+34 644 39 26 28",
+  phoneLink: "tel:+34644392628",
   
   // Email
   email: "Info@evolutfitkid.com",
