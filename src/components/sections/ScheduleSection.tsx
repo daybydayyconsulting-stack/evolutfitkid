@@ -37,14 +37,14 @@ export const ScheduleSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex justify-center gap-2 mb-8"
+          className="flex justify-center gap-1 sm:gap-2 mb-8 flex-wrap"
         >
           {tabs.map((tab) => (
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
               className={`
-                flex items-center gap-2 px-5 py-3 rounded-xl font-medium text-sm transition-all duration-300
+                flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2.5 sm:py-3 rounded-xl font-medium text-xs sm:text-sm transition-all duration-300
                 ${
                   activeTab === tab.key
                     ? "bg-primary text-primary-foreground shadow-lg shadow-primary/30"
@@ -53,7 +53,8 @@ export const ScheduleSection = () => {
               `}
             >
               {tab.icon}
-              {tab.label}
+              <span className="hidden sm:inline">{tab.label}</span>
+              <span className="sm:hidden">{tab.label}</span>
             </button>
           ))}
         </motion.div>
@@ -68,7 +69,29 @@ export const ScheduleSection = () => {
             transition={{ duration: 0.3 }}
             className="card-magic"
           >
-            <div className="overflow-x-auto">
+            {/* Mobile: Cards layout */}
+            <div className="block sm:hidden space-y-3">
+              {SCHEDULE[activeTab].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="p-4 rounded-xl bg-secondary/30 border border-border/30"
+                >
+                  <div className="flex justify-between items-start mb-2">
+                    <span className="text-foreground font-medium">{item.day}</span>
+                    <span className="text-primary font-semibold">{item.time}</span>
+                  </div>
+                  <span className="inline-flex px-3 py-1 rounded-full bg-primary/10 text-primary text-xs">
+                    {item.level}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Desktop: Table layout */}
+            <div className="hidden sm:block overflow-x-auto">
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-border/50">
@@ -100,8 +123,8 @@ export const ScheduleSection = () => {
             </div>
             
             {/* Note */}
-            <p className="mt-6 pt-4 border-t border-border/30 text-sm text-muted-foreground text-center">
-              ℹ️ Los horarios pueden ajustarse por nivel y cupos. Confirma por WhatsApp.
+            <p className="mt-6 pt-4 border-t border-border/30 text-xs sm:text-sm text-muted-foreground text-center">
+              Los horarios pueden ajustarse por nivel y cupos. Confirma por WhatsApp.
             </p>
           </motion.div>
         </AnimatePresence>
