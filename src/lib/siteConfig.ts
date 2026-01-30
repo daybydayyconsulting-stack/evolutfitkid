@@ -19,9 +19,9 @@ export const CONTACT = {
   instagram: "https://instagram.com/evolutfitkid",
   
   // Ubicación
-  address: "Ventorro del Cano (zona Boadilla/Pozuelo)",
-  googleMapsLink: "https://maps.google.com/?q=Ventorro+del+Cano+Boadilla",
-  googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345!2d-3.12345!3d40.12345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sVentorro%20del%20Cano!5e0!3m2!1ses!2ses!4v1234567890",
+  address: "Calle Batres 10B, Ventorro del Cano (Madrid)",
+  googleMapsLink: "https://www.google.com/maps/search/?api=1&query=Calle+Batres+10B+Ventorro+del+Cano+Madrid",
+  googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.5!2d-3.9383!3d40.4089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41806b1c5c9c37%3A0x0!2sCalle%20Batres%2010B%2C%20Ventorro%20del%20Cano%2C%20Madrid!5e0!3m2!1ses!2ses!4v1706600000000!5m2!1ses!2ses",
 };
 
 export const SCHEDULE = {
