@@ -26,10 +26,10 @@ export const CONTACT = {
 
 export const SCHEDULE = {
   escuela: [
-    { day: "Lunes", time: "17:00 - 18:00", level: "Iniciación" },
-    { day: "Miércoles", time: "17:00 - 18:00", level: "Iniciación" },
-    { day: "Martes", time: "18:00 - 19:00", level: "Intermedio" },
-    { day: "Jueves", time: "18:00 - 19:00", level: "Intermedio" },
+    { day: "Lunes", time: "17:00 - 18:00", level: "Iniciación (4-7 años)" },
+    { day: "Miércoles", time: "17:00 - 18:00", level: "Iniciación (4-7 años)" },
+    { day: "Martes", time: "18:00 - 19:00", level: "Intermedio (8-12 años)" },
+    { day: "Jueves", time: "18:00 - 19:00", level: "Intermedio (8-12 años)" },
   ],
   competicion: [
     { day: "Lunes", time: "18:00 - 20:00", level: "Competición" },
@@ -48,7 +48,7 @@ export const PACKAGES = [
     name: "Clase de Prueba",
     target: "Primera toma de contacto",
     features: [
-      "1 sesión completa",
+      "1 sesión completa con el grupo",
       "Conoce el método y al equipo",
       "Sin compromiso",
     ],
@@ -71,11 +71,11 @@ export const PACKAGES = [
   {
     id: "competicion",
     name: "Competición",
-    target: "Niñas con experiencia",
+    target: "Alumnas con experiencia",
     features: [
-      "3 días por semana",
+      "3 días por semana (6h)",
       "Preparación de coreografías",
-      "Participación en torneos",
+      "Participación en campeonatos oficiales",
       "Equipo de alto rendimiento",
     ],
     price: "Consultar",
@@ -98,6 +98,54 @@ export const PACKAGES = [
 
 export const SEO = {
   title: "Evolut FitKid | Escuela de Fantasía y FitKid en Madrid",
-  description: "Escuela-club donde niñas y adultos entrenan, progresan y se suben al escenario con confianza. Fantasía, FitKid y Competición en Ventorro del Cano (Boadilla/Pozuelo).",
+  description: "FitKid combina danza y acrobacia: elementos de gimnasia artística, aeróbica, acrobática y rítmica. Escuela y competición en Ventorro del Cano (Boadilla/Pozuelo). La disciplina más completa para niñas y adultos.",
   ogImage: "/og-image.jpg",
+};
+
+// Contenido adicional para secciones
+export const CONTENT = {
+  hero: {
+    badge: "Escuela de Fantasía y FitKid",
+    title: "Donde el arte de la danza se encuentra con la exigencia deportiva",
+    subtitle: "FitKid fusiona danza con acrobacia, integrando saltos, giros, equilibrios y técnicas de todas las gimnasias al ritmo de la música.",
+    bullets: [
+      "Escuela (2h/semana) y vía a Competición (3 días/semana)",
+      "Progreso visible, ambiente de familia y atención personalizada",
+    ],
+    location: "Sede en Ventorro del Cano (zona Boadilla/Pozuelo)",
+    microcopy: "Respuesta rápida · Cupos limitados por sala",
+  },
+  whatIs: {
+    title: "¿Qué es Evolut?",
+    subtitle: "Dos disciplinas, un mismo objetivo: que cada alumna disfrute, progrese y brille en el escenario.",
+    fantasia: {
+      title: "Fantasía",
+      description: "Interpretación y storytelling. Las alumnas aprenden a contar historias con su cuerpo, expresando emociones a través de la danza y la actuación. Creatividad, musicalidad y puesta en escena.",
+      features: [
+        "Expresión corporal y drama",
+        "Coreografías con narrativa",
+        "Preparación para exhibiciones y competiciones",
+      ],
+    },
+    fitkid: {
+      title: "FitKid",
+      description: "La disciplina más completa: combina danza con elementos de gimnasia artística, aeróbica, acrobática y rítmica. Las alumnas ganan fuerza, flexibilidad y confianza mientras disfrutan.",
+      features: [
+        "Acrobacias, saltos y giros",
+        "Condición física y fuerza",
+        "Técnica progresiva por niveles",
+      ],
+    },
+  },
+  differentiators: [
+    "Formación física y artística integral en una sola actividad",
+    "Camino competitivo oficial con la Federación de FitKid España",
+    "Ambiente cercano donde cada evolución cuenta",
+    "La novedad que combina lo mejor de danza y gimnasia",
+  ],
+  finalCta: {
+    title: "¿Te encaja?",
+    subtitle: "Te contamos el mejor grupo según edad y nivel.",
+    trust: "Sin compromiso · Te orientamos en 2 minutos",
+  },
 };
