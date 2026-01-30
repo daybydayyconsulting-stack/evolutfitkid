@@ -105,15 +105,10 @@ export const SEO = {
 // Contenido adicional para secciones
 export const CONTENT = {
   hero: {
-    badge: "Escuela de Fantasía y FitKid",
-    title: "Donde el arte de la danza se encuentra con la exigencia deportiva",
-    subtitle: "FitKid fusiona danza con acrobacia, integrando saltos, giros, equilibrios y técnicas de todas las gimnasias al ritmo de la música.",
-    bullets: [
-      "Escuela (2h/semana) y vía a Competición (3 días/semana)",
-      "Progreso visible, ambiente de familia y atención personalizada",
-    ],
-    location: "Sede en Ventorro del Cano (zona Boadilla/Pozuelo)",
-    microcopy: "Respuesta rápida · Cupos limitados por sala",
+    badge: "Ventorro del Cano · Boadilla/Pozuelo",
+    title: "Danza, acrobacia y disciplina en un solo deporte",
+    subtitle: "Escuela y competición para niñas de 4 a 16 años",
+    microcopy: "Clase de prueba gratuita · Cupos limitados",
   },
   whatIs: {
     title: "¿Qué es Evolut?",

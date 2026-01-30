@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageCircle, Phone, Star, Zap } from "lucide-react";
+import { MessageCircle, Phone } from "lucide-react";
 import { CONTACT, CONTENT } from "@/lib/siteConfig";
 
 export const HeroSection = () => {
@@ -39,38 +39,11 @@ export const HeroSection = () => {
           {CONTENT.hero.subtitle}
         </motion.p>
 
-        {/* Bullets */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex flex-col md:flex-row gap-4 md:gap-8 justify-center items-center mb-12 text-sm md:text-base"
-        >
-          <div className="flex items-center gap-2 text-foreground/80">
-            <Star className="w-4 h-4 text-primary" />
-            <span>{CONTENT.hero.bullets[0]}</span>
-          </div>
-          <div className="flex items-center gap-2 text-foreground/80">
-            <Zap className="w-4 h-4 text-primary" />
-            <span>{CONTENT.hero.bullets[1]}</span>
-          </div>
-        </motion.div>
-
-        {/* Location badge */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-muted-foreground text-sm mb-10"
-        >
-          {CONTENT.hero.location}
-        </motion.div>
-
         {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <a
@@ -95,7 +68,7 @@ export const HeroSection = () => {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
           className="text-xs text-muted-foreground mt-6"
         >
           {CONTENT.hero.microcopy}
