@@ -27,7 +27,7 @@ export const ScheduleSection = () => {
         >
           <h2 className="heading-lg text-foreground mb-4">Horarios</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Elige el programa que mejor se adapte a ti o a tu hija.
+            Elige el programa que mejor se adapte a ti o a tu hija/o.
           </p>
         </motion.div>
 
