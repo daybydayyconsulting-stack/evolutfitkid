@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { WhatIsFitkidSection } from "@/components/sections/WhatIsFitkidSection";
 import { WhatIsEvolutSection } from "@/components/sections/WhatIsEvolutSection";
+import { GallerySection } from "@/components/sections/GallerySection";
 import { ScheduleSection } from "@/components/sections/ScheduleSection";
 import { PackagesSection } from "@/components/sections/PackagesSection";
 import { LocationSection } from "@/components/sections/LocationSection";
@@ -65,6 +66,9 @@ const Index = () => {
 
         {/* What is Evolut - Detailed */}
         <WhatIsEvolutSection />
+
+        {/* Gallery */}
+        <GallerySection />
 
         {/* Schedule */}
         <ScheduleSection />
