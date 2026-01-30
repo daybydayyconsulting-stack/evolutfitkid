@@ -5,11 +5,6 @@ import { CONTACT } from "@/lib/siteConfig";
 export const FinalCTASection = () => {
   return (
     <section className="relative section-padding overflow-hidden">
-      {/* Lighter gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-primary/10 pointer-events-none" />
-      
-      {/* Glow effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container max-w-3xl mx-auto text-center relative z-10">
         <motion.div
