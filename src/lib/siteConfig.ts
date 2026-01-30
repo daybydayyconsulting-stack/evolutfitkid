@@ -5,18 +5,15 @@
 
 export const CONTACT = {
   // WhatsApp con mensaje precargado
-  whatsappLink: "https://wa.me/34XXXXXXXXX?text=Hola%20Belén%2C%20quiero%20info%20para%20una%20clase%20de%20prueba%20en%20Evolut%20FitKid.",
-  whatsappNumber: "+34 XXX XXX XXX",
-  
-  // Teléfono
-  phone: "+34 XXX XXX XXX",
-  phoneLink: "tel:+34XXXXXXXXX",
+  whatsappLink: "https://wa.me/34644392628?text=Hola%20Belén%2C%20quiero%20info%20para%20una%20clase%20de%20prueba%20en%20Evolut%20FitKid.",
+  whatsappNumber: "+34 644 39 26 28",
   
   // Email
-  email: "info@evolutfitkid.com",
+  email: "Info@evolutfitkid.com",
+  emailLink: "mailto:Info@evolutfitkid.com",
   
   // Redes sociales
-  instagram: "https://instagram.com/evolutfitkid",
+  instagram: "https://www.instagram.com/evolutfitkid/",
   
   // Ubicación
   address: "Calle Batres 10B, Ventorro del Cano (Madrid)",

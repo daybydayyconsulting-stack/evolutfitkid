@@ -1,4 +1,4 @@
-import { Instagram, MessageCircle, Phone, Mail } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 import { CONTACT } from "@/lib/siteConfig";
 
 export const Footer = () => {
@@ -26,23 +26,7 @@ export const Footer = () => {
               <Instagram className="w-5 h-5" />
             </a>
             <a
-              href={CONTACT.whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
-              aria-label="WhatsApp"
-            >
-              <MessageCircle className="w-5 h-5" />
-            </a>
-            <a
-              href={CONTACT.phoneLink}
-              className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
-              aria-label="Teléfono"
-            >
-              <Phone className="w-5 h-5" />
-            </a>
-            <a
-              href={`mailto:${CONTACT.email}`}
+              href={CONTACT.emailLink}
               className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
               aria-label="Email"
             >
