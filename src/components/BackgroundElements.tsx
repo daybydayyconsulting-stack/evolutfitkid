@@ -1,47 +1,6 @@
 import { useEffect, useState, useMemo } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
-
-// Butterfly SVG - Minimal line-art placeholder (easy to replace with real logo)
-const ButterflyOutline = ({ className = "", style = {} }: { className?: string; style?: React.CSSProperties }) => (
-  <svg
-    viewBox="0 0 100 60"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className={`butterfly-outline ${className}`}
-    style={style}
-  >
-    {/* Left wing */}
-    <path
-      d="M50 30C40 15 20 5 10 15C5 25 15 40 30 35C40 32 48 30 50 30Z"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    {/* Right wing */}
-    <path
-      d="M50 30C60 15 80 5 90 15C95 25 85 40 70 35C60 32 52 30 50 30Z"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    {/* Body */}
-    <path
-      d="M50 25V45"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
-    {/* Antennae */}
-    <path
-      d="M48 25C46 20 44 18 42 16M52 25C54 20 56 18 58 16"
-      stroke="currentColor"
-      strokeWidth="1"
-      strokeLinecap="round"
-    />
-  </svg>
-);
+import mariposaSrc from "@/assets/mariposa.png";
 
 // Generate random spark positions
 const generateSparks = (count: number) => {
@@ -57,9 +16,9 @@ const generateSparks = (count: number) => {
 
 // Butterfly positions
 const butterflies = [
-  { id: 1, left: "10%", top: "20%", size: 60, delay: 0 },
-  { id: 2, left: "85%", top: "35%", size: 50, delay: 2 },
-  { id: 3, left: "15%", top: "70%", size: 45, delay: 4 },
+  { id: 1, left: "10%", top: "20%", size: 80, delay: 0, rotate: -15 },
+  { id: 2, left: "85%", top: "35%", size: 60, delay: 2, rotate: 20 },
+  { id: 3, left: "15%", top: "70%", size: 50, delay: 4, rotate: -10 },
 ];
 
 export const BackgroundElements = () => {
@@ -96,21 +55,21 @@ export const BackgroundElements = () => {
               top: spark.top,
               width: spark.size,
               height: spark.size,
-              opacity: 0.4,
             }}
           />
         ))}
         {/* Static butterflies */}
         {butterflies.slice(0, 2).map((b) => (
-          <ButterflyOutline
+          <img
             key={b.id}
-            className="text-butterfly"
+            src={mariposaSrc}
+            alt=""
+            className="butterfly-bg"
             style={{
               left: b.left,
               top: b.top,
-              width: b.size,
-              height: b.size * 0.6,
-              opacity: 0.3,
+              width: isMobile ? b.size * 0.7 : b.size,
+              transform: `rotate(${b.rotate}deg)`,
             }}
           />
         ))}
@@ -149,39 +108,34 @@ export const BackgroundElements = () => {
       {/* Butterflies with parallax */}
       <motion.div style={{ y: butterfliesY }} className="absolute inset-0">
         {butterflies.map((b, index) => (
-          <motion.div
+          <motion.img
             key={b.id}
-            className="absolute"
+            src={mariposaSrc}
+            alt=""
+            className="butterfly-bg"
             style={{
               left: b.left,
               top: b.top,
+              width: isMobile ? b.size * 0.7 : b.size,
             }}
             animate={{
-              y: [-10, -30, -15, -25, -10],
-              x: [-5, 10, -8, 5, -5],
-              rotate: [-5, 5, -3, 4, -5],
+              y: [-10, -25, -15, -20, -10],
+              x: [-5, 8, -6, 4, -5],
+              rotate: [b.rotate, b.rotate + 8, b.rotate - 5, b.rotate + 3, b.rotate],
             }}
             transition={{
-              duration: 12 + index * 2,
+              duration: 14 + index * 2,
               delay: b.delay,
               repeat: Infinity,
               ease: "easeInOut",
             }}
-          >
-            <ButterflyOutline
-              className="text-butterfly"
-              style={{
-                width: isMobile ? b.size * 0.7 : b.size,
-                height: (isMobile ? b.size * 0.7 : b.size) * 0.6,
-              }}
-            />
-          </motion.div>
+          />
         ))}
       </motion.div>
 
-      {/* Ambient glow spots */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+      {/* Subtle ambient spots - no glow */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/3 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/3 rounded-full blur-3xl" />
     </div>
   );
 };
@@ -203,54 +157,50 @@ export const PortalTransition = () => {
         className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]"
         style={{ opacity, scale }}
       >
-        {/* Outer ring */}
+        {/* Outer ring - subtle */}
         <motion.div
-          className="absolute inset-0 rounded-full border-2 border-primary/40"
-          style={{
-            boxShadow: "0 0 60px hsl(190 90% 60% / 0.3), inset 0 0 40px hsl(190 90% 60% / 0.1)",
-          }}
+          className="absolute inset-0 rounded-full border border-primary/30"
           animate={{ rotate: 360 }}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        />
+        
+        {/* Inner ring - subtle */}
+        <motion.div
+          className="absolute inset-8 rounded-full border border-accent/20"
+          animate={{ rotate: -360 }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         />
         
-        {/* Inner ring */}
-        <motion.div
-          className="absolute inset-8 rounded-full border border-accent/30"
-          style={{
-            boxShadow: "0 0 40px hsl(280 70% 70% / 0.2)",
-          }}
-          animate={{ rotate: -360 }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        />
-        
-        {/* Center glow */}
-        <div className="absolute inset-16 rounded-full bg-gradient-radial from-primary/20 to-transparent" />
+        {/* Center gradient */}
+        <div className="absolute inset-16 rounded-full bg-gradient-radial from-primary/10 to-transparent" />
         
         {/* Portal butterflies */}
         {[0, 1, 2].map((i) => (
-          <motion.div
+          <motion.img
             key={i}
+            src={mariposaSrc}
+            alt=""
             className="absolute"
             style={{
               left: "50%",
               top: "50%",
-              marginLeft: -20,
-              marginTop: -12,
+              marginLeft: -15,
+              marginTop: -15,
+              width: 30,
+              opacity: 0.4,
             }}
             animate={{
-              x: [0, 60 * Math.cos((i * 120 * Math.PI) / 180), 0],
-              y: [0, 60 * Math.sin((i * 120 * Math.PI) / 180), 0],
-              opacity: [0, 0.6, 0],
+              x: [0, 50 * Math.cos((i * 120 * Math.PI) / 180), 0],
+              y: [0, 50 * Math.sin((i * 120 * Math.PI) / 180), 0],
+              opacity: [0, 0.4, 0],
             }}
             transition={{
-              duration: 3,
-              delay: i * 0.5,
+              duration: 4,
+              delay: i * 0.6,
               repeat: Infinity,
               ease: "easeInOut",
             }}
-          >
-            <ButterflyOutline className="text-primary w-10 h-6" />
-          </motion.div>
+          />
         ))}
       </motion.div>
     </div>
