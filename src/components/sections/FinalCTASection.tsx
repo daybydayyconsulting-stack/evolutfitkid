@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageCircle, Phone, Shield } from "lucide-react";
+import { MessageCircle, Shield } from "lucide-react";
 import { CONTACT } from "@/lib/siteConfig";
 
 export const FinalCTASection = () => {
@@ -23,22 +23,15 @@ export const FinalCTASection = () => {
           </h2>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
+          <div className="flex justify-center items-center mt-10">
             <a
               href={CONTACT.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-glow flex items-center gap-3 text-lg animate-glow-pulse"
+              className="btn-glow flex items-center gap-3 text-lg"
             >
               <MessageCircle className="w-6 h-6" />
               Hablar con Belén ahora
-            </a>
-            <a
-              href={CONTACT.phoneLink}
-              className="btn-outline-glow flex items-center gap-3"
-            >
-              <Phone className="w-5 h-5" />
-              Llamar
             </a>
           </div>
 

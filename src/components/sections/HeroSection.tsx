@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { CONTACT, CONTENT } from "@/lib/siteConfig";
 
 export const HeroSection = () => {
@@ -54,13 +54,6 @@ export const HeroSection = () => {
           >
             <MessageCircle className="w-5 h-5" />
             Hablar con Belén
-          </a>
-          <a
-            href={CONTACT.phoneLink}
-            className="btn-outline-glow flex items-center gap-3"
-          >
-            <Phone className="w-5 h-5" />
-            Llamar
           </a>
         </motion.div>
 
