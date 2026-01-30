@@ -1,4 +1,5 @@
 import { BackgroundElements, PortalTransition } from "@/components/BackgroundElements";
+import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { WhatIsEvolutSection } from "@/components/sections/WhatIsEvolutSection";
 import { ScheduleSection } from "@/components/sections/ScheduleSection";
@@ -44,6 +45,9 @@ const Index = () => {
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
+      {/* Header with logo */}
+      <Header />
+
       {/* Background elements (sparks, butterflies, ambient glows) */}
       <BackgroundElements />
 
