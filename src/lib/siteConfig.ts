@@ -63,7 +63,7 @@ export const PACKAGES = [
   {
     id: "prueba" as const,
     name: "CLASE DE PRUEBA",
-    target: "Escoge entre Escuela, Competición, Adultos o Premium. Te ayudamos a encontrar el grupo más adecuado para ti.",
+    target: "Primera toma de contacto",
     features: [
       "1 sesión completa con el grupo",
       "Conoce el método y al equipo",
@@ -171,8 +171,8 @@ export const CONTENT = {
     "Versatilidad para competir en diferentes modalidades",
   ],
   finalCta: {
-    title: "¿LISTA PARA EMPEZAR?",
-    subtitle: "Reserva tu clase de prueba gratuita y descubre el mundo Evolut.",
+    title: "CLASE DE PRUEBA SIN COMPROMISO",
+    subtitle: "Escoge entre Escuela, Competición, Adultos o Premium. Te ayudamos a encontrar el grupo más adecuado para ti.",
     trust: "Sin compromiso · Te orientamos en 2 minutos",
   },
 };
