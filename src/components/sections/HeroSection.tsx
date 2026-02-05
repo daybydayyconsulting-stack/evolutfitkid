@@ -50,7 +50,7 @@ export const HeroSection = () => {
             duration: 0.8,
             delay: 0.3
           }} className="text-muted-foreground text-sm mb-8">
-               Ventorro del Cano (Boadilla/Pozuelo)
+               Ventorro del Cano (Boadilla/Pozuelo) |  Madrid  
             </motion.div>
 
             {/* CTAs */}
