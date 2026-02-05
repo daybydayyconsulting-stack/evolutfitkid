@@ -67,7 +67,7 @@ export const BackgroundElements = () => {
   // If reduced motion, render static elements
   if (prefersReducedMotion) {
     return (
-      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-10">
         {/* Static sparks */}
         {sparks.slice(0, 10).map((spark) => (
           <div
@@ -101,7 +101,7 @@ export const BackgroundElements = () => {
   }
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-10">
       {/* Sparks with parallax */}
       <motion.div style={{ y: sparksY }} className="absolute inset-0">
         {sparks.map((spark) => (
