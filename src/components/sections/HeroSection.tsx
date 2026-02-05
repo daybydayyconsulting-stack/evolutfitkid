@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MessageCircle, Phone } from "lucide-react";
-import { CONTACT } from "@/lib/siteConfig";
+import { CONTACT, getWhatsAppLink } from "@/lib/siteConfig";
 import heroImage1 from "@/assets/hero-class-1.jpg";
 import heroImage2 from "@/assets/hero-class-2.jpg";
 export const HeroSection = () => {
@@ -64,7 +64,7 @@ export const HeroSection = () => {
             duration: 0.8,
             delay: 0.4
           }} className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
-              <a href={CONTACT.whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-glow flex items-center gap-3 text-lg">
+              <a href={getWhatsAppLink("prueba")} target="_blank" rel="noopener noreferrer" className="btn-glow flex items-center gap-3 text-lg">
                 <MessageCircle className="w-5 h-5" />
                 Hablar con Belén
               </a>
