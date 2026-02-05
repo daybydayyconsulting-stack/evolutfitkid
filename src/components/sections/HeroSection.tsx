@@ -23,7 +23,7 @@ export const HeroSection = () => {
             delay: 0.1
           }} className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider leading-tight mb-4 uppercase">
               <span className="text-primary">FitKid</span>
-              <span className="text-muted-foreground font-light"> & </span>
+              
               
             </motion.h1>
 
