@@ -58,7 +58,7 @@ export const PackagesSection = () => {
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
                 className={`
-                  flex items-center gap-1.5 px-3 py-2.5 rounded-xl font-medium text-xs transition-all duration-300 uppercase tracking-wide
+                  flex items-center gap-1.5 px-2 sm:px-3 py-2 sm:py-2.5 rounded-lg sm:rounded-xl font-medium text-xs transition-all duration-300 uppercase tracking-wide
                   ${
                     activeTab === tab.key
                       ? "bg-primary text-primary-foreground shadow-lg shadow-primary/30"
@@ -67,7 +67,7 @@ export const PackagesSection = () => {
                 `}
               >
                 {tab.icon}
-                <span className="hidden sm:inline">{tab.label}</span>
+                <span>{tab.label}</span>
               </button>
             ))}
           </motion.div>
