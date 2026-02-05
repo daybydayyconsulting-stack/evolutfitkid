@@ -102,6 +102,12 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  /* Smooth scroll for all scrollable containers */
+  * {
+    scroll-behavior: smooth;
   }
 
   body {
