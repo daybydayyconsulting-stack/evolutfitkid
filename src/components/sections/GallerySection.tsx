@@ -59,6 +59,8 @@ export const GallerySection = () => {
               <img
                 src={photo}
                 alt={`Evolut FitKid - Foto ${i + 1}`}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
@@ -88,8 +90,34 @@ export const GallerySection = () => {
                       src={video}
                       className="w-full h-full object-cover"
                       controls
-                      preload="metadata"
+                      preload="none"
                       playsInline
+                      poster=""
+                      onLoadedMetadata={(e) => {
+                        // Generate poster from first frame
+                        const video = e.currentTarget;
+                        if (!video.poster) {
+                          video.currentTime = 0.1;
+                        }
+                      }}
+                      onSeeked={(e) => {
+                        const video = e.currentTarget;
+                        if (!video.poster || video.poster === "") {
+                          try {
+                            const canvas = document.createElement("canvas");
+                            canvas.width = video.videoWidth;
+                            canvas.height = video.videoHeight;
+                            const ctx = canvas.getContext("2d");
+                            if (ctx) {
+                              ctx.drawImage(video, 0, 0);
+                              video.poster = canvas.toDataURL("image/jpeg", 0.7);
+                              video.currentTime = 0;
+                            }
+                          } catch (err) {
+                            // Silently fail if canvas fails
+                          }
+                        }
+                      }}
                     />
                   </div>
                 </CarouselItem>
