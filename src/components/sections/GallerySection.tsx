@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Camera } from "lucide-react";
+import { Camera, Play } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -7,6 +8,8 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "@/components/ui/carousel";
+import { Skeleton } from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
 
 // Import images
 import photo1 from "@/assets/gallery/photo-1.jpg";
@@ -24,6 +27,61 @@ import video5 from "@/assets/gallery/video-5.mp4";
 const photos = [photo1, photo2, photo3, photo4];
 const videos = [video1, video2, video3, video4, video5];
 
+const PhotoWithSkeleton = ({ src, alt }: { src: string; alt: string }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div className="aspect-square rounded-2xl overflow-hidden border border-border/30 relative bg-muted">
+      {!isLoaded && (
+        <Skeleton className="absolute inset-0 w-full h-full rounded-2xl" />
+      )}
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        onLoad={() => setIsLoaded(true)}
+        className={cn(
+          "w-full h-full object-cover hover:scale-105 transition-all duration-500",
+          isLoaded ? "opacity-100" : "opacity-0"
+        )}
+      />
+    </div>
+  );
+};
+
+const VideoWithSkeleton = ({ src }: { src: string }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div className="aspect-[9/16] rounded-2xl overflow-hidden border border-border/30 bg-muted relative">
+      {!isLoaded && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <Skeleton className="absolute inset-0 w-full h-full rounded-2xl" />
+          <div className="relative z-10 flex flex-col items-center gap-3">
+            <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+              <Play className="w-5 h-5 text-primary/50" />
+            </div>
+            <span className="text-xs text-muted-foreground">Cargando...</span>
+          </div>
+        </div>
+      )}
+      <video
+        src={src}
+        className={cn(
+          "w-full h-full object-cover transition-opacity duration-300",
+          isLoaded ? "opacity-100" : "opacity-0"
+        )}
+        controls
+        preload="metadata"
+        playsInline
+        muted
+        onLoadedData={() => setIsLoaded(true)}
+      />
+    </div>
+  );
+};
+
 export const GallerySection = () => {
   return (
     <section className="relative section-padding bg-card/30">
@@ -40,7 +98,7 @@ export const GallerySection = () => {
             <Camera className="w-4 h-4" />
             Nuestra escuela en acción
           </span>
-          <h2 className="heading-lg text-foreground">Galería</h2>
+          <h2 className="heading-lg text-foreground">GALERÍA</h2>
         </motion.div>
 
         {/* Photos Grid */}
@@ -52,18 +110,11 @@ export const GallerySection = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10"
         >
           {photos.map((photo, i) => (
-            <div
-              key={i}
-              className="aspect-square rounded-2xl overflow-hidden border border-border/30"
-            >
-              <img
-                src={photo}
-                alt={`Evolut FitKid - Foto ${i + 1}`}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
+            <PhotoWithSkeleton 
+              key={i} 
+              src={photo} 
+              alt={`Evolut FitKid - Foto ${i + 1}`} 
+            />
           ))}
         </motion.div>
 
@@ -85,16 +136,7 @@ export const GallerySection = () => {
             <CarouselContent className="-ml-4">
               {videos.map((video, i) => (
                 <CarouselItem key={i} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <div className="aspect-[9/16] rounded-2xl overflow-hidden border border-border/30 bg-background">
-                    <video
-                      src={video}
-                      className="w-full h-full object-cover"
-                      controls
-                      preload="metadata"
-                      playsInline
-                      muted
-                    />
-                  </div>
+                  <VideoWithSkeleton src={video} />
                 </CarouselItem>
               ))}
             </CarouselContent>
