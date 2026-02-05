@@ -1,10 +1,10 @@
 import { MessageCircle } from "lucide-react";
-import { CONTACT } from "@/lib/siteConfig";
+import { getWhatsAppLink } from "@/lib/siteConfig";
 
 export const FloatingWhatsApp = () => {
   return (
     <a
-      href={CONTACT.whatsappLink}
+      href={getWhatsAppLink("general")}
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-float"

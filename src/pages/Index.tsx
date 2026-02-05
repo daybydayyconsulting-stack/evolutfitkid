@@ -2,7 +2,7 @@ import { BackgroundElements, PortalTransition } from "@/components/BackgroundEle
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { WhatIsFitkidSection } from "@/components/sections/WhatIsFitkidSection";
-import { WhatIsEvolutSection } from "@/components/sections/WhatIsEvolutSection";
+import { BelenSection } from "@/components/sections/BelenSection";
 import { GallerySection } from "@/components/sections/GallerySection";
 import { ScheduleSection } from "@/components/sections/ScheduleSection";
 import { PackagesSection } from "@/components/sections/PackagesSection";
@@ -67,11 +67,11 @@ const Index = () => {
         {/* Gallery */}
         <GallerySection />
 
+        {/* Belén - Entrenadora */}
+        <BelenSection />
+
         {/* Schedule */}
         <ScheduleSection />
-
-        {/* What is Evolut - Detailed */}
-        <WhatIsEvolutSection />
 
         {/* Packages */}
         <PackagesSection />

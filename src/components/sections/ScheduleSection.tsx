@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Clock, Users, Award } from "lucide-react";
+import { Clock, Users, Award, Crown } from "lucide-react";
 import { SCHEDULE } from "@/lib/siteConfig";
 
-type TabKey = "escuela" | "competicion" | "adultos";
+type TabKey = "escuela" | "competicion" | "adultos" | "premium";
 
 const tabs: { key: TabKey; label: string; icon: React.ReactNode }[] = [
-  { key: "escuela", label: "Escuela", icon: <Users className="w-4 h-4" /> },
-  { key: "competicion", label: "Competición", icon: <Award className="w-4 h-4" /> },
-  { key: "adultos", label: "Adultos", icon: <Clock className="w-4 h-4" /> },
+  { key: "escuela", label: "ESCUELA", icon: <Users className="w-4 h-4" /> },
+  { key: "competicion", label: "COMPETICIÓN", icon: <Award className="w-4 h-4" /> },
+  { key: "adultos", label: "ADULTOS", icon: <Clock className="w-4 h-4" /> },
+  { key: "premium", label: "PREMIUM", icon: <Crown className="w-4 h-4" /> },
 ];
 
 export const ScheduleSection = () => {
@@ -25,8 +26,8 @@ export const ScheduleSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="heading-lg text-foreground mb-4">Horarios</h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+          <h2 className="heading-lg text-foreground mb-4 uppercase">HORARIOS</h2>
+          <p className="text-muted-foreground max-w-xl mx-auto text-base md:text-lg">
             Elige el programa que mejor se adapte a ti o a tu hija/o.
           </p>
         </motion.div>
@@ -44,7 +45,7 @@ export const ScheduleSection = () => {
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
               className={`
-                flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2.5 sm:py-3 rounded-xl font-medium text-xs sm:text-sm transition-all duration-300
+                flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl font-medium text-xs sm:text-sm transition-all duration-300 uppercase tracking-wide
                 ${
                   activeTab === tab.key
                     ? "bg-primary text-primary-foreground shadow-lg shadow-primary/30"
@@ -53,8 +54,7 @@ export const ScheduleSection = () => {
               `}
             >
               {tab.icon}
-              <span className="hidden sm:inline">{tab.label}</span>
-              <span className="sm:hidden">{tab.label}</span>
+              <span>{tab.label}</span>
             </button>
           ))}
         </motion.div>
@@ -80,7 +80,7 @@ export const ScheduleSection = () => {
                   className="p-4 rounded-xl bg-secondary/30 border border-border/30"
                 >
                   <div className="flex justify-between items-start mb-2">
-                    <span className="text-foreground font-medium">{item.day}</span>
+                    <span className="text-foreground font-medium uppercase">{item.day}</span>
                     <span className="text-primary font-semibold">{item.time}</span>
                   </div>
                   <span className="inline-flex px-3 py-1 rounded-full bg-primary/10 text-primary text-xs">
@@ -95,9 +95,9 @@ export const ScheduleSection = () => {
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-border/50">
-                    <th className="text-left py-4 px-4 text-muted-foreground font-medium text-sm">Día</th>
-                    <th className="text-left py-4 px-4 text-muted-foreground font-medium text-sm">Horario</th>
-                    <th className="text-left py-4 px-4 text-muted-foreground font-medium text-sm">Nivel</th>
+                    <th className="text-left py-4 px-4 text-muted-foreground font-medium text-sm uppercase tracking-wide">DÍA</th>
+                    <th className="text-left py-4 px-4 text-muted-foreground font-medium text-sm uppercase tracking-wide">HORARIO</th>
+                    <th className="text-left py-4 px-4 text-muted-foreground font-medium text-sm uppercase tracking-wide">NIVEL</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -109,7 +109,7 @@ export const ScheduleSection = () => {
                       transition={{ delay: index * 0.1 }}
                       className="border-b border-border/30 last:border-0"
                     >
-                      <td className="py-4 px-4 text-foreground font-medium">{item.day}</td>
+                      <td className="py-4 px-4 text-foreground font-medium uppercase">{item.day}</td>
                       <td className="py-4 px-4 text-primary font-semibold">{item.time}</td>
                       <td className="py-4 px-4">
                         <span className="inline-flex px-3 py-1 rounded-full bg-primary/10 text-primary text-sm">
