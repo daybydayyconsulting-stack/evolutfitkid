@@ -27,8 +27,8 @@ export const CONTACT = {
   
   // Ubicación
   address: "Calle Batres 10B, Ventorro del Cano (Madrid)",
-  googleMapsLink: "https://www.google.com/maps/search/?api=1&query=Calle+Batres+10B+Ventorro+del+Cano+Pozuelo+Madrid",
-  googleMapsEmbed: "https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Calle+Batres+10B,+Ventorro+del+Cano,+Pozuelo+de+Alarcon,+Madrid,+Spain&zoom=16",
+  googleMapsLink: "https://maps.app.goo.gl/ohk6Q7BaozRawAju5",
+  googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.5!2d-3.8368!3d40.4143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418e3c91c5b5c5%3A0x1234567890abcdef!2sCalle%20Batres%2C%2010B%2C%2028223%20Pozuelo%20de%20Alarc%C3%B3n%2C%20Madrid!5e0!3m2!1ses!2ses!4v1234567890",
 };
 
 // Helper para generar enlaces de WhatsApp
