@@ -65,6 +65,7 @@ export const PACKAGES = [
     name: "CLASE DE PRUEBA",
     target: "Primera toma de contacto",
     features: [
+      "Elige entre Escuela, Competición, Adultos o Premium",
       "1 sesión completa con el grupo",
       "Conoce el método y al equipo",
       "Sin compromiso",
