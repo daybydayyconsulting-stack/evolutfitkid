@@ -42,6 +42,22 @@ export const WhatIsFitkidSection = () => {
           </p>
         </motion.div>
 
+        {/* Label */}
+        <motion.div initial={{
+        opacity: 0
+      }} whileInView={{
+        opacity: 1
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.6,
+        delay: 0.15
+      }} className="flex justify-center mb-4">
+          <span className="text-xs font-medium text-primary uppercase tracking-widest">
+            Lo que nos caracteriza
+          </span>
+        </motion.div>
+
         {/* Objectives Grid */}
         <motion.div initial={{
         opacity: 0,
