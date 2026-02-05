@@ -24,7 +24,7 @@ export const HeroSection = () => {
           }} className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider leading-tight mb-4 uppercase">
               <span className="text-primary">FitKid</span>
               <span className="text-muted-foreground font-light"> & </span>
-              <span className="text-primary">Fantasía</span>
+              
             </motion.h1>
 
             {/* Tagline */}
