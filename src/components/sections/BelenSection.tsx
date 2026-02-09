@@ -46,12 +46,26 @@ export const BelenSection = () => {
               {CONTENT.belen.description}
             </p>
 
-            {/* Highlights */}
-            <ul className="space-y-3">
-              {CONTENT.belen.highlights.map((highlight, i) => (
+            {/* Como deportista */}
+            <h3 className="text-foreground font-semibold text-sm uppercase tracking-wide mb-2">Como deportista</h3>
+            <ul className="space-y-2 mb-5">
+              {CONTENT.belen.highlightsDeportista.map((highlight, i) => (
                 <li key={i} className="flex items-center gap-3 text-foreground/80">
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Star className="w-3 h-3 text-primary" />
+                  </div>
+                  <span className="text-sm md:text-base">{highlight}</span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Como entrenadora */}
+            <h3 className="text-foreground font-semibold text-sm uppercase tracking-wide mb-2">Como entrenadora</h3>
+            <ul className="space-y-2">
+              {CONTENT.belen.highlightsEntrenadora.map((highlight, i) => (
+                <li key={i} className="flex items-center gap-3 text-foreground/80">
+                  <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Award className="w-3 h-3 text-accent" />
                   </div>
                   <span className="text-sm md:text-base">{highlight}</span>
                 </li>

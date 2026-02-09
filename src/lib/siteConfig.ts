@@ -39,23 +39,21 @@ export const getWhatsAppLink = (packageId: keyof typeof CONTACT.whatsappMessages
 
 export const SCHEDULE = {
   escuela: [
-    { day: "LUNES", time: "17:00 - 18:00", level: "Iniciación (4-7 años)" },
-    { day: "MIÉRCOLES", time: "17:00 - 18:00", level: "Iniciación (4-7 años)" },
-    { day: "MARTES", time: "18:00 - 19:00", level: "Intermedio (8-12 años)" },
-    { day: "JUEVES", time: "18:00 - 19:00", level: "Intermedio (8-12 años)" },
+    { day: "MARTES", time: "17:00 - 18:00", level: "Grupo Escuela" },
+    { day: "JUEVES", time: "17:00 - 18:00", level: "Grupo Escuela" },
   ],
   competicion: [
-    { day: "LUNES", time: "18:00 - 19:30", level: "Compromiso y desarrollo" },
-    { day: "MIÉRCOLES", time: "18:00 - 19:30", level: "Compromiso y desarrollo" },
-    { day: "VIERNES", time: "17:00 - 18:30", level: "Compromiso y desarrollo" },
+    { day: "MARTES Y JUEVES", time: "18:00 - 19:00", level: "Equipo Baby" },
+    { day: "LUNES Y MIÉRCOLES", time: "19:00 - 20:30", level: "Equipo Kid" },
+    { day: "LUNES Y MIÉRCOLES", time: "20:30 - 22:00", level: "Equipo Junior-Adulto" },
+    { day: "SÁBADOS", time: "11:00 - 12:30", level: "Equipo Baby y Kid" },
+    { day: "SÁBADOS", time: "12:30 - 14:00", level: "Equipo Junior-Adulto" },
   ],
   adultos: [
-    { day: "MARTES", time: "20:00 - 21:00", level: "Todos los niveles" },
-    { day: "JUEVES", time: "20:00 - 21:00", level: "Todos los niveles" },
+    { day: "VIERNES", time: "17:30 - 19:00", level: "Acrobacia Adultos" },
   ],
   premium: [
-    { day: "MARTES", time: "20:00 - 21:00", level: "+30 años" },
-    { day: "JUEVES", time: "20:00 - 21:00", level: "+30 años" },
+    { day: "VIERNES", time: "19:00 - 21:00", level: "Equipo Premium Competición" },
   ],
 };
 
@@ -145,24 +143,29 @@ export const CONTENT = {
   },
   whatIsFitkid: {
     title: "¿QUÉ ES EL FITKID?",
-    subtitle: "El FitKid es la disciplina deportiva que está revolucionando el mundo infantil. Combina lo mejor de la gimnasia artística, aeróbica, acrobática y rítmica con la expresión de la danza, todo al ritmo de la música.",
+    subtitle: "El FitKid es la fusión perfecta entre danza y acrobacia que se integran para formar bailarines completos y versátiles. Exige compromiso, esfuerzo y trabajo en equipo pero al mismo tiempo es un arte que permite expresar y crear sin límites.",
     objectives: [
-      { title: "Versatilidad", description: "Formación completa en múltiples disciplinas" },
-      { title: "Acrobacia", description: "Saltos, giros y elementos acrobáticos" },
+      { title: "Versatilidad", description: "Bailarines completos en múltiples disciplinas" },
+      { title: "Acrobacia", description: "Fusión de danza y elementos acrobáticos" },
       { title: "Fuerza y flexibilidad", description: "Desarrollo físico integral" },
       { title: "Danza y técnica", description: "Expresión corporal y musicalidad" },
-      { title: "Compañerismo", description: "Trabajo en equipo y valores" },
+      { title: "Compañerismo", description: "Compromiso, esfuerzo y trabajo en equipo" },
     ],
-    competitive: "Existe un camino competitivo oficial con la Organización de FitKid España: licencias, competiciones autonómicas, nacionales e internacionales.",
+    competitive: "En las competiciones, los participantes no solo pueden competir en FitKid®, sino también en otras especialidades como Dance Show, Danza Urbana y Fantasía.",
   },
   belen: {
     title: "BELÉN",
     subtitle: "ENTRENADORA Y TRAYECTORIA",
-    description: "Con más de 15 años de experiencia en gimnasia y danza, Belén fundó Evolut con una visión clara: formar deportistas completos en un ambiente cercano donde cada alumna pueda crecer, disfrutar y brillar. Su enfoque combina la exigencia técnica con el cariño y la motivación personal.",
-    highlights: [
-      "Formación en gimnasia artística y rítmica",
-      "Certificación oficial en FitKid",
-      "Experiencia en competición nacional e internacional",
+    description: "Doble grado en Fisioterapia y Ciencias de la Actividad Física y del Deporte, con maestría en gimnasia artística y Máster en formación al profesorado de Educación Física. Belén combina su formación académica con una sólida trayectoria deportiva y como entrenadora.",
+    highlightsDeportista: [
+      "8 años en equipo de alto rendimiento de gimnasia artística",
+      "4 años en equipo de competición de danza urbana",
+      "4 años en equipo de competición de cheerleading",
+    ],
+    highlightsEntrenadora: [
+      "3 años como entrenadora en escuela de gimnasia",
+      "5 años como entrenadora y co-coordinadora en un club de FitKid en Madrid",
+      "Fundadora, coordinadora y entrenadora de Evolut FitKid",
     ],
   },
   differentiators: [
