@@ -16,32 +16,12 @@ const generateSparks = (count: number) => {
 
 // Butterfly positions - distributed throughout the entire page
 const butterflies = [
-  // Top area
   { id: 1, left: "8%", top: "5%", size: 90, delay: 0, rotate: -15 },
   { id: 2, left: "88%", top: "8%", size: 70, delay: 1.5, rotate: 20 },
-  { id: 3, left: "50%", top: "3%", size: 50, delay: 1, rotate: 5 },
-  
-  // Upper-mid area
-  { id: 4, left: "5%", top: "20%", size: 55, delay: 2.5, rotate: -12 },
-  { id: 5, left: "92%", top: "18%", size: 65, delay: 3, rotate: 18 },
-  { id: 6, left: "75%", top: "25%", size: 45, delay: 0.5, rotate: -8 },
-  
-  // Mid area
-  { id: 7, left: "12%", top: "40%", size: 60, delay: 3, rotate: -10 },
-  { id: 8, left: "85%", top: "38%", size: 55, delay: 2, rotate: 22 },
-  { id: 9, left: "3%", top: "50%", size: 75, delay: 4, rotate: -18 },
-  { id: 10, left: "95%", top: "52%", size: 50, delay: 1.8, rotate: 12 },
-  
-  // Lower-mid area
-  { id: 11, left: "10%", top: "65%", size: 65, delay: 2.2, rotate: -25 },
-  { id: 12, left: "90%", top: "68%", size: 80, delay: 3.5, rotate: 15 },
-  { id: 13, left: "78%", top: "72%", size: 40, delay: 1.2, rotate: -5 },
-  
-  // Bottom area
-  { id: 14, left: "5%", top: "85%", size: 55, delay: 4, rotate: -20 },
-  { id: 15, left: "88%", top: "82%", size: 70, delay: 2.8, rotate: 25 },
-  { id: 16, left: "15%", top: "92%", size: 45, delay: 0.8, rotate: 8 },
-  { id: 17, left: "82%", top: "95%", size: 60, delay: 3.2, rotate: -15 },
+  { id: 3, left: "5%", top: "35%", size: 60, delay: 2.5, rotate: -12 },
+  { id: 4, left: "92%", top: "50%", size: 65, delay: 3, rotate: 18 },
+  { id: 5, left: "10%", top: "70%", size: 55, delay: 2, rotate: -10 },
+  { id: 6, left: "85%", top: "85%", size: 70, delay: 3.5, rotate: 15 },
 ];
 
 export const BackgroundElements = () => {
