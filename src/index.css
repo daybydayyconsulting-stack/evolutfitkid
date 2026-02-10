@@ -177,7 +177,7 @@
   /* Butterfly */
   .butterfly-bg {
     @apply absolute;
-    opacity: 0.5;
+    opacity: 0.15;
   }
 
   /* Section spacing */
