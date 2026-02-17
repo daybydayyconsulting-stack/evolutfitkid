@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Award, Heart, Star } from "lucide-react";
+import { Award, Star } from "lucide-react";
 import { CONTENT } from "@/lib/siteConfig";
+import belenPhoto from "@/assets/belen.jpg";
 
 export const BelenSection = () => {
   return (
@@ -15,14 +16,8 @@ export const BelenSection = () => {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 border border-border/30 flex items-center justify-center overflow-hidden">
-              {/* Placeholder for real photo */}
-              <div className="text-center p-6">
-                <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-10 h-10 text-primary" />
-                </div>
-                <p className="text-muted-foreground text-sm">Foto de Belén</p>
-              </div>
+            <div className="aspect-[4/5] rounded-2xl overflow-hidden">
+              <img src={belenPhoto} alt="Belén - Entrenadora de Evolut FitKid" className="w-full h-full object-cover" />
             </div>
             
             {/* Decorative elements */}
