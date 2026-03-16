@@ -129,8 +129,8 @@ export const PACKAGES = [
 ];
 
 export const SEO = {
-  title: "Evolut FitKid | Escuela de FitKid en Madrid",
-  description: "EVOLUT es una escuela de FitKid que forma alumnos versátiles y completos: acrobacia, fuerza, flexibilidad, danza y técnica. Escuela y competición en Ventorro del Cano (Boadilla/Pozuelo).",
+  title: "Evolut FitKid | Escuela y Club de FitKid en Madrid",
+  description: "Evolut FitKid: escuela y club de FitKid en Madrid. Clases de acrobacia, danza y competición para niñas, jóvenes y adultos en Ventorro del Cano (Boadilla/Pozuelo). Clase de prueba gratuita.",
   ogImage: "/og-image.jpg",
 };
 
