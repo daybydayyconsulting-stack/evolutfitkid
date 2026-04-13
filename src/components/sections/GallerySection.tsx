@@ -26,6 +26,14 @@ import photo11 from "@/assets/gallery/photo-11.jpg";
 import photo12 from "@/assets/gallery/photo-12.jpg";
 import photo13 from "@/assets/gallery/photo-13.jpg";
 import photo14 from "@/assets/gallery/photo-14.jpg";
+import photo15 from "@/assets/gallery/photo-15.jpg";
+import photo16 from "@/assets/gallery/photo-16.jpg";
+import photo17 from "@/assets/gallery/photo-17.jpg";
+import photo18 from "@/assets/gallery/photo-18.jpg";
+import photo19 from "@/assets/gallery/photo-19.jpg";
+import photo20 from "@/assets/gallery/photo-20.jpg";
+import photo21 from "@/assets/gallery/photo-21.jpg";
+import photo22 from "@/assets/gallery/photo-22.jpg";
 
 // Import videos
 import video1 from "@/assets/gallery/video-1.mp4";
@@ -34,7 +42,28 @@ import video3 from "@/assets/gallery/video-3.mp4";
 import video4 from "@/assets/gallery/video-4.mp4";
 import video5 from "@/assets/gallery/video-5.mp4";
 
-const photos = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12, photo13, photo14];
+// Ordered: most eye-catching first (acrobatics, trophies, team)
+const photos = [
+  photo17, // acrobacia rojo - pirueta
+  photo21, // niñas con medallas y trofeo
+  photo10, // Belén con diploma en podio
+  photo16, // foto equipo con bandera Evolut
+  photo11, // equipo abrazándose en podio
+  photo19, // acrobacia rojo - pose
+  photo9,  // podio con trajes coloridos
+  photo18, // acrobacia rojo - suelo
+  photo5,  // ceremonia podio
+  photo22, // grupo premium adultos
+  photo8,  // niña haciendo split
+  photo15, // felicitación entre equipos
+  photo6,  // niñas en fila
+  photo20, // entrega diploma con niñas
+  photo14, // Belén con niña en brazos
+  photo7,  // abrazo en competición
+  photo12, // equipo aplaudiendo
+  photo13, // entrega medalla
+  photo1, photo2, photo3, photo4,
+];
 const videos = [video1, video2, video3, video4, video5];
 
 const PhotoWithSkeleton = ({ src, alt }: { src: string; alt: string }) => {
