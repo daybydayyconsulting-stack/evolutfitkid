@@ -3,6 +3,7 @@ import { MessageCircle, Phone } from "lucide-react";
 import { CONTACT, getWhatsAppLink } from "@/lib/siteConfig";
 import heroImage1 from "@/assets/hero-class-1.jpg";
 import heroImage2 from "@/assets/hero-class-2.jpg";
+import heroImage3 from "@/assets/gallery/photo-17.jpg";
 export const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center section-padding pt-24 md:pt-32">
       {/* Hero content */}
@@ -116,6 +117,20 @@ export const HeroSection = () => {
               delay: 0.6
             }} className="absolute -bottom-4 -left-4 md:-left-8 w-32 md:w-40 lg:w-48">
                 <img src={heroImage2} alt="Alumnas de Evolut entrenando" className="w-full h-auto rounded-xl shadow-xl object-cover aspect-square border-4 border-background" />
+              </motion.div>
+
+              {/* Third image - acrobatics */}
+              <motion.div initial={{
+              opacity: 0,
+              x: -20
+            }} animate={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.8
+            }} className="absolute -top-4 -right-4 md:-right-8 w-28 md:w-36 lg:w-44">
+                <img src={heroImage3} alt="Acrobacia FitKid Evolut" className="w-full h-auto rounded-xl shadow-xl object-cover aspect-[3/4] border-4 border-background" />
               </motion.div>
             </div>
           </motion.div>
