@@ -3,6 +3,7 @@ import { MessageCircle, Phone } from "lucide-react";
 import { CONTACT, getWhatsAppLink } from "@/lib/siteConfig";
 import heroImage1 from "@/assets/hero-class-1.jpg";
 import heroImage2 from "@/assets/hero-class-2.jpg";
+import heroImage3 from "@/assets/gallery/photo-17.jpg";
 export const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center section-padding pt-24 md:pt-32">
       {/* Hero content */}
