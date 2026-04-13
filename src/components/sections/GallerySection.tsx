@@ -16,6 +16,16 @@ import photo1 from "@/assets/gallery/photo-1.jpg";
 import photo2 from "@/assets/gallery/photo-2.jpg";
 import photo3 from "@/assets/gallery/photo-3.jpg";
 import photo4 from "@/assets/gallery/photo-4.jpg";
+import photo5 from "@/assets/gallery/photo-5.jpg";
+import photo6 from "@/assets/gallery/photo-6.jpg";
+import photo7 from "@/assets/gallery/photo-7.jpg";
+import photo8 from "@/assets/gallery/photo-8.jpg";
+import photo9 from "@/assets/gallery/photo-9.jpg";
+import photo10 from "@/assets/gallery/photo-10.jpg";
+import photo11 from "@/assets/gallery/photo-11.jpg";
+import photo12 from "@/assets/gallery/photo-12.jpg";
+import photo13 from "@/assets/gallery/photo-13.jpg";
+import photo14 from "@/assets/gallery/photo-14.jpg";
 
 // Import videos
 import video1 from "@/assets/gallery/video-1.mp4";
@@ -24,7 +34,7 @@ import video3 from "@/assets/gallery/video-3.mp4";
 import video4 from "@/assets/gallery/video-4.mp4";
 import video5 from "@/assets/gallery/video-5.mp4";
 
-const photos = [photo1, photo2, photo3, photo4];
+const photos = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12, photo13, photo14];
 const videos = [video1, video2, video3, video4, video5];
 
 const PhotoWithSkeleton = ({ src, alt }: { src: string; alt: string }) => {
@@ -101,21 +111,34 @@ export const GallerySection = () => {
           <h2 className="heading-lg text-foreground">GALERÍA</h2>
         </motion.div>
 
-        {/* Photos Grid */}
+        {/* Photos Carousel */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10"
+          className="px-12 mb-10"
         >
-          {photos.map((photo, i) => (
-            <PhotoWithSkeleton 
-              key={i} 
-              src={photo} 
-              alt={`Evolut FitKid - Foto ${i + 1}`} 
-            />
-          ))}
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {photos.map((photo, i) => (
+                <CarouselItem key={i} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <PhotoWithSkeleton 
+                    src={photo} 
+                    alt={`Evolut FitKid - Foto ${i + 1}`} 
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="border-primary/30 text-primary hover:bg-primary/10" />
+            <CarouselNext className="border-primary/30 text-primary hover:bg-primary/10" />
+          </Carousel>
         </motion.div>
 
         {/* Videos Carousel */}
