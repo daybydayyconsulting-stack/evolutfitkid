@@ -105,21 +105,7 @@ export const HeroSection = () => {
               {/* Overlay gradient */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-background/40 to-transparent" />
               
-              {/* Secondary image floating */}
-              <motion.div initial={{
-              opacity: 0,
-              x: 20
-            }} animate={{
-              opacity: 1,
-              x: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.6
-            }} className="absolute -bottom-4 -left-4 md:-left-8 w-32 md:w-40 lg:w-48">
-                <img src={heroImage2} alt="Alumnas de Evolut entrenando" className="w-full h-auto rounded-xl shadow-xl object-cover aspect-square border-4 border-background" />
-              </motion.div>
-
-              {/* Third image - acrobatics */}
+              {/* Acrobatics image - top left */}
               <motion.div initial={{
               opacity: 0,
               x: -20
@@ -128,9 +114,23 @@ export const HeroSection = () => {
               x: 0
             }} transition={{
               duration: 0.8,
-              delay: 0.8
-            }} className="absolute -top-4 -right-4 md:-right-8 w-28 md:w-36 lg:w-44">
+              delay: 0.6
+            }} className="absolute -top-4 -left-4 md:-left-8 w-28 md:w-36 lg:w-44">
                 <img src={heroImage3} alt="Acrobacia FitKid Evolut" className="w-full h-auto rounded-xl shadow-xl object-cover aspect-[3/4] border-4 border-background" />
+              </motion.div>
+
+              {/* Secondary image - bottom right */}
+              <motion.div initial={{
+              opacity: 0,
+              x: 20
+            }} animate={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.8
+            }} className="absolute -bottom-4 -right-4 md:-right-8 w-32 md:w-40 lg:w-48">
+                <img src={heroImage2} alt="Alumnas de Evolut entrenando" className="w-full h-auto rounded-xl shadow-xl object-cover aspect-square border-4 border-background" />
               </motion.div>
             </div>
           </motion.div>
