@@ -111,21 +111,34 @@ export const GallerySection = () => {
           <h2 className="heading-lg text-foreground">GALERÍA</h2>
         </motion.div>
 
-        {/* Photos Grid */}
+        {/* Photos Carousel */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10"
+          className="px-12 mb-10"
         >
-          {photos.map((photo, i) => (
-            <PhotoWithSkeleton 
-              key={i} 
-              src={photo} 
-              alt={`Evolut FitKid - Foto ${i + 1}`} 
-            />
-          ))}
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {photos.map((photo, i) => (
+                <CarouselItem key={i} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <PhotoWithSkeleton 
+                    src={photo} 
+                    alt={`Evolut FitKid - Foto ${i + 1}`} 
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="border-primary/30 text-primary hover:bg-primary/10" />
+            <CarouselNext className="border-primary/30 text-primary hover:bg-primary/10" />
+          </Carousel>
         </motion.div>
 
         {/* Videos Carousel */}
